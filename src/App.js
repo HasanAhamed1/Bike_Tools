@@ -8,6 +8,7 @@ import Tools from './Pages/Home/Tools';
 import ToolDetail from './Pages/Home/ToolDetail';
 import Signup from './Pages/Login/Signup';
 import Items from './Pages/Home/ItemCollection/Items';
+import Footer from './Shared/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/items' element={<Items></Items>}></Route>
         <Route path='/tool/:toolId' element={<ToolDetail></ToolDetail>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
