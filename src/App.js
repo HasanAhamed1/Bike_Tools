@@ -7,6 +7,7 @@ import Login from './Pages/Login/Login';
 import Tools from './Pages/Home/Tools';
 import ToolDetail from './Pages/Home/ToolDetail';
 import Signup from './Pages/Login/Signup';
+import Items from './Pages/Home/ItemCollection/Items';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='/tools' element={<Tools></Tools>}></Route>
+        <Route path='/items' element={<Items></Items>}></Route>
         <Route path='/tool/:toolId' element={<ToolDetail></ToolDetail>}></Route>
       </Routes>
     </div>
