@@ -9,6 +9,10 @@ import ToolDetail from './Pages/Home/ToolDetail';
 import Signup from './Pages/Login/Signup';
 import Items from './Pages/Home/ItemCollection/Items';
 import Footer from './Shared/Footer';
+import RequireAuth from './Shared/RequireAuth';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import MyProfile from './Pages/Dashboard/MyProfile';
+import AllUsers from './Pages/Dashboard/AllUsers';
 
 function App() {
   return (
@@ -22,6 +26,12 @@ function App() {
         <Route path='/tools' element={<Tools></Tools>}></Route>
         <Route path='/items' element={<Items></Items>}></Route>
         <Route path='/tool/:toolId' element={<ToolDetail></ToolDetail>}></Route>
+        <Route path='/dashboard' element={<RequireAuth>
+          <Dashboard></Dashboard>
+        </RequireAuth>}>
+          <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route path='allusers' element={<AllUsers></AllUsers>}></Route>
+          </Route>
       </Routes>
       <Footer></Footer>
     </div>
