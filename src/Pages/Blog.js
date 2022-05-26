@@ -2,8 +2,17 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div>
-            
+        <div className='grid gap-10 m-10'>
+            <p>1.How will you improve the performance of a React Application?</p>
+            <p>Ans: Reacts gave us some useful feature thus make our work easier. But, in default it includes with many helpful warnings also with a lot of things. Thus, make it heavier file and slower. To optimize react first we have to find the performance problem. One state update in parent component causes the re-render of parent and child components. To solve it, we have to do keep component state local when it necessary. For removing unnecessary re-rendering we must memorize a component just when it necessary. We can use React.memo() , useCallback Hook,  useMemo Hook. By using dynamic import() in React we can make code-splitting. It is one of the best way to optimize our application. By avoid rendering all the images of an application reduce the load time.</p>
+            <p>2.What are the different ways to manage a state in a React application?</p>
+            <p>Ans: There are mainly four types of main state in React app. Local state, Global state, Server state, URL state. Use state is possibly the easiest kind of state which can manage. To manage state we can use UseState. It accepts every valid data value including primitive and object. For both local and global state, a best option is useReducer. It has a built-in way to perform a number of different operations by the help of reducer function. We can also manage global state by using third party libraries like Jotai , Recoil. In server state, to prevent loading spinner while load data we can use libraries like SWR and React Query. Though they don’t give us a convenient performance but they keep track of necessary states and cache. For URL state we can use the current state of React Router. Because here we can get useHistory or useLocation type easier method. Thus we can easily get all information.</p>
+            <p>3.How does prototypical inheritance work?</p>
+            <p>Ans: Javascript is a prototype based and object-oriented programming language. But in the present version it also supports prototypical inheritance. It means, now it can share, extend and copy it’s objects and methods. By using a reference pointer function it allows us to reuse a methods or properties from one object to another. Javascript object has  a special property “Prototype”. This is a hidden property. This property can be either null or references of another object. For example, it we have an object named messi. We read the property of it and its missing. But it has a porotype. Javascript automatically take the data from its prototype.</p>
+            <p>4.Why you do not set the state directly in React. For example, if you have const [products, setProducts] = useState([]). Why you do not set products = [...] instead, you use the setProducts</p>
+            <p>5.You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</p>
+            <p>6.What is a unit test? Why should write unit tests?</p>
+            <p>Ans: Unit testing is one kind of software development process. Where units are called smallest testable parts of an application. These are individually and independently scrutinized for proper operation. During a development process unit testing is done by the software developer. So that a developer can ensure that all code meets the best quality before it is deployed.  As a result, it saves money, more important it saves time. Also unit testing makes the debugging process easier. A dev can re-use code in different projects. Thus a problem identified earlier so the fewer compound errors occur. So it can be said, write unit test is too  much important for making work easier and efficient.</p>
         </div>
     );
 };
