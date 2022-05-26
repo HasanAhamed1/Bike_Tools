@@ -25,7 +25,7 @@ const ToolDetail = () => {
       userPhone: event.target.phone.value
     }
 
-    fetch('http://localhost:5000/booking', {
+    fetch('https://calm-scrubland-52483.herokuapp.com/booking', {
         method: 'POST',
         headers:{
             'content-type': 'application/json'

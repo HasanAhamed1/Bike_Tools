@@ -37,7 +37,7 @@ const MyProfile = ({isLoading}) => {
               status: data.status,
               phone: data.phone
             }
-            fetch('http://localhost:5000/profile',{
+            fetch('https://calm-scrubland-52483.herokuapp.com/profile',{
               method: 'POST',
               headers:{
                 'content-type': 'application/json',

@@ -34,7 +34,7 @@ const AddProduct = ({isLoading}) => {
               availableQuantity: data.availableQuantity,
               price: data.price
             }
-            fetch('http://localhost:5000/tools',{
+            fetch('https://calm-scrubland-52483.herokuapp.com/tools',{
               method: 'POST',
               headers:{
                 'content-type': 'application/json',

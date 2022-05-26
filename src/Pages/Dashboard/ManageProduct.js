@@ -5,7 +5,7 @@ import ProductRow from './ProductRow';
 
 
 const ManageProducts = () => {
-    const {data: products, isLoading, refetch} = useQuery('products', () => fetch('http://localhost:5000/tools', {
+    const {data: products, isLoading, refetch} = useQuery('products', () => fetch('https://calm-scrubland-52483.herokuapp.com/tools', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

@@ -36,7 +36,7 @@ const AddReview = ({isLoading}) => {
               review: data.review,
               ratings: data.ratings
             }
-            fetch('http://localhost:5000/review',{
+            fetch('https://calm-scrubland-52483.herokuapp.com/review',{
               method: 'POST',
               headers:{
                 'content-type': 'application/json',

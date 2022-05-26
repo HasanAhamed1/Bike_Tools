@@ -14,7 +14,7 @@ const CheckoutForm = ({order}) => {
   const [clientSecret, setClientSecret] = useState('');
 
   useEffect( () =>{
-    fetch('http://localhost:5000/create-payment-intent', {
+    fetch('https://calm-scrubland-52483.herokuapp.com/create-payment-intent', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -79,7 +79,7 @@ const CheckoutForm = ({order}) => {
               order: _id,
               transectionId: paymentIntent.id
           }
-          fetch(`http://localhost:5000/bookings/${_id}`, {
+          fetch(`https://calm-scrubland-52483.herokuapp.com/bookings/${_id}`, {
             method: 'PATCH',
             headers: {
               'content-type': 'application/json',
