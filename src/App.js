@@ -13,6 +13,8 @@ import RequireAuth from './Shared/RequireAuth';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import AllUsers from './Pages/Dashboard/AllUsers';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -33,6 +35,7 @@ function App() {
           <Route path='allusers' element={<AllUsers></AllUsers>}></Route>
           </Route>
       </Routes>
+      <ToastContainer />
       <Footer></Footer>
     </div>
   );
