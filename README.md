@@ -2,6 +2,40 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Name of the project 'Bike-Tools'
+
+## livesite
+You can go to the website by clicking this [link](https://bike-spot.web.app).
+
+## YOU CAN FIND
+**Here  one can maintain a bike tools shop**
+
+### Tools used:
+- json file
+- DOM
+- Tailwind
+- Heroicons
+- Mongodb
+- Fontawesome
+- Firebase
+- React
+- daisyui
+- react stripe js
+
+
+### Feature:
+- Sign Up opition
+- Log in by their google acount
+- can be logged in by email and pass
+- It helps you to maintain products in a shop
+- This website provide you customer's demand
+- You can update and change data
+- Admin can make anyone admin
+- User can see their orders payment
+
+### wanna communicate:
+
+[if want communicate](https://www.facebook.com/akash.hossain.75457081/)
 ## Available Scripts
 
 In the project directory, you can run:

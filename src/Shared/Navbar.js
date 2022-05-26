@@ -1,11 +1,13 @@
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../firebase.init";
 
 const Navbar = () => {
   const [user, loading, error] = useAuthState(auth);
+
+  const navigate = useNavigate();
 
   const logout = () => {
     signOut(auth);
@@ -62,7 +64,7 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <a class="btn btn-ghost normal-case text-xl">Bikers Spot</a>
+        <button onClick={()=>navigate('/')} className="btn btn-ghost normal-case text-xl">Bike Tools</button>
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal p-0">{menuItems}</ul>

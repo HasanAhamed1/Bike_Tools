@@ -28,6 +28,10 @@ const MyOrders = () => {
             })
         }
     }, [user]);
+
+    
+
+    
     return (
         <div>
             <h2>My orders: {orders.length}</h2>
@@ -39,6 +43,7 @@ const MyOrders = () => {
         <th>Name</th>
         <th>Quantity</th>
         <th>Action</th>
+        <th>Cancel</th>
       </tr>
     </thead>
     <tbody>
@@ -55,6 +60,7 @@ const MyOrders = () => {
                 <p><span className='text-success'>{o.transectionId}</span></p>
                 </div>}
             </td>
+            <td><button className='btn btn-xs btn-error'>X</button></td>
           </tr>)
       }
     </tbody>
