@@ -9,7 +9,7 @@ const Tool = ({tool}) => {
         navigate(`/tool/${id}`)
     }
     return (
-        <div className="card lg:max-w-lg bg-gray-300 shadow-xl">
+        <div className="card lg:max-w-lg bg-gray-100 shadow-xl">
       <figure className="px-10 pt-10">
         <img
           src={img}
@@ -30,4 +30,3 @@ const Tool = ({tool}) => {
 };
 
 export default Tool;
-

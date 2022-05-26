@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Tool from './Tool';
+import Tool from "../Home/Tool";
+import ToolDetail from './ToolDetail';
 
 const Tools = () => {
     const [tools, setTools] = useState([]);
+    const [purchase, setPurchase] = useState(null);
 
     useEffect( () => {
         fetch('http://localhost:5000/tools')
@@ -18,9 +20,11 @@ const Tools = () => {
                     tools?.map(tool => <Tool
                         key={tool._id}
                         tool={tool}
+                        setPurchase={setPurchase}
                         ></Tool>)
                 }
-            </div> 
+            </div>
+            {purchase && <ToolDetail purchase={purchase}></ToolDetail>}
         </div>
     );
 };
