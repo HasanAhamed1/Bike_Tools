@@ -10,39 +10,37 @@ const ToolDetail = () => {
   const [tool] = useToolDetail(toolId);
   const [user, loading, error] = useAuthState(auth);
 
-  const handleBooking = event => {
+  const handleBooking = (event) => {
     event.preventDefault();
     console.log(toolId, tool.name, tool.price);
     const booking = {
-        Id: toolId,
-        tool: tool.name,
-        availableQuantity: tool.availableQuantity,
-        minOrderQuantity: tool.minOrderQuantity,
-        quantity: event.target.quantity.value,
-        price: tool.price,
+      Id: toolId,
+      tool: tool.name,
+      availableQuantity: tool.availableQuantity,
+      minOrderQuantity: tool.minOrderQuantity,
+      quantity: event.target.quantity.value,
+      price: tool.price,
       customer: user.email,
       userName: user.displayName,
-      userPhone: event.target.phone.value
-    }
+      userPhone: event.target.phone.value,
+    };
 
-    fetch('https://calm-scrubland-52483.herokuapp.com/booking', {
-        method: 'POST',
-        headers:{
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify(booking)
+    fetch("https://calm-scrubland-52483.herokuapp.com/booking", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(booking),
     })
-    .then(res => res.json())
-    .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data);
-        if(data){
-            toast('Successfully Booked');
+        if (data) {
+          toast("Successfully Booked");
+        } else {
+          toast.error("Sorry");
         }
-        else{
-            toast.error('Sorry')
-        }
-        
-    })
+      });
   };
   return (
     //     <div>
@@ -74,11 +72,11 @@ const ToolDetail = () => {
           <img src={tool.img} alt="Shoes" />
         </figure>
         <div className="card-body">
-        <h1>{tool.name}</h1>
-        <p>{tool.shortDescription}</p>
-        <p>{tool.price}</p>
-        <p>{tool.availableQuantity}</p>
-        <p>{tool.minOrderQuantity}</p>
+          <h1>{tool.name}</h1>
+          <p>{tool.shortDescription}</p>
+          <p>{tool.price}</p>
+          <p>{tool.availableQuantity}</p>
+          <p>{tool.minOrderQuantity}</p>
         </div>
       </div>
       <div>
@@ -86,7 +84,7 @@ const ToolDetail = () => {
           onSubmit={handleBooking}
           className="grid grid-cols-1 gap-3 justify-center mt-2"
         >
-            <input
+          <input
             type="number"
             name="quantity"
             placeholder="Quantity"
