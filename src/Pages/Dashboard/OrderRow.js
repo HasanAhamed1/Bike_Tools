@@ -7,7 +7,7 @@ const OrderRow = ({ index, order, setOrders, orders }) => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      fetch(`http://localhost:5000/bookings/${id}`, {
+      fetch(`https://calm-scrubland-52483.herokuapp.com/bookings/${id}`, {
         method: "DELETE",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,

@@ -12,7 +12,7 @@ const ManageAllOrders = () => {
     isLoading,
     refetch,
   } = useQuery("orders", () =>
-    fetch("http://localhost:5000/booking", {
+    fetch("https://calm-scrubland-52483.herokuapp.com/booking", {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
@@ -21,7 +21,7 @@ const ManageAllOrders = () => {
 
   // const handlePayment = (id) => {
 
-  //   fetch(`http://localhost:5000/bookings/${id}`)
+  //   fetch(`https://calm-scrubland-52483.herokuapp.com/bookings/${id}`)
   // .then(res=>res.json())
   // .then(data =>{
   //     setButton('paid');

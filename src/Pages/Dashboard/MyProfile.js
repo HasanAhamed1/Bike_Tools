@@ -38,7 +38,7 @@ const MyProfile = ({ isLoading }) => {
             status: data.status,
             phone: data.phone,
           };
-          fetch(`http://localhost:5000/profile/${email}`, {
+          fetch(`https://calm-scrubland-52483.herokuapp.com/profile/${email}`, {
             method: "PUT",
             headers: {
               "content-type": "application/json",
