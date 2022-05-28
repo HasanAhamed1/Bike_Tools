@@ -63,6 +63,8 @@ const Portfolio = () => {
         </div>
       </div>
       </div>
+      <div><a href="https://verdant-faun-275d7d.netlify.app/">first website</a></div>
+      <div><a href="https://verdant-faun-275d7d.netlify.app/">Second website</a></div>
     </div>
   );
 };
